@@ -221,8 +221,6 @@ main section#section2 .changeBox button {
   cursor: pointer;
   outline: 0;
   margin: -1px;
-  -webkit-transition: all 0.1s;
-  transition: all 0.1s;
 }
 
 main section#section2 .changeBox button:hover {
@@ -239,9 +237,21 @@ main section#section2 .boxes .box {
   display: none;
 }
 
+main section#section2 .boxes .box .left {
+  z-index: 5;
+  position: relative;
+}
+
 main section#section2 .boxes .box .left::before {
   content: "";
-  background-color: #5368df;
+  background: #5368df;
+  width: 115%;
+  height: 330px;
+  position: absolute;
+  z-index: -1;
+  left: -165px;
+  top: 100px;
+  border-radius: 0 0 150px 0;
 }
 
 main section#section2 .boxes .box .right {
@@ -288,5 +298,95 @@ main section#section2 .boxes .box.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+main section#section3 {
+  margin-top: 650px;
+  text-align: center;
+}
+
+main section#section3 .textPart h1 {
+  color: #252b46;
+  font-size: 28px;
+}
+
+main section#section3 .textPart p {
+  max-width: 40%;
+  margin: 25px auto;
+  font-size: 16px;
+  color: #9194a1;
+}
+
+main section#section3 .containerCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+}
+
+main section#section3 .containerCards .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  margin: 0 25px;
+  -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+main section#section3 .containerCards .card .logo {
+  padding: 30px;
+}
+
+main section#section3 .containerCards .card .text {
+  margin: 20px;
+}
+
+main section#section3 .containerCards .card button {
+  margin: 30px;
+  padding: 18px 35px;
+  width: 85%;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  background: #5368df;
+  color: #f5f5f5;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+
+main section#section3 .containerCards .card button:hover {
+  color: #5368df;
+  background: #ffffff;
+  border-color: #5368df;
+}
+
+main section#section3 .containerCards .card:nth-child(2) {
+  position: relative;
+  top: 60px;
+}
+
+main section#section3 .containerCards .card:nth-child(3) {
+  position: relative;
+  top: 120px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -11,7 +11,7 @@ The designs were created to the following widths:
 
 ### Primary
 - Blue: #3e52a3 (Mind)
-- Soft Blue: hsl(231, 69%, 60%)
+- Soft Blue: #5368df
 - Soft Red: hsl(0, 94%, 66%)
 
 ### Neutral

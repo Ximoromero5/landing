@@ -182,7 +182,6 @@ main {
                 cursor: pointer;
                 outline: 0;
                 margin: -1px;
-                transition: all 0.1s;
                 &:hover {
                     color: $red;
                 }
@@ -197,9 +196,18 @@ main {
                 position: absolute;
                 display: none;
                 .left {
+                    z-index: 5;
+                    position: relative;
                     &::before {
                         content: "";
-                        background-color: $blue;
+                        background: #5368df;
+                        width: 115%;
+                        height: 330px;
+                        position: absolute;
+                        z-index: -1;
+                        left: -165px;
+                        top: 100px;
+                        border-radius: 0 0 150px 0;
                     }
                 }
                 .right {
@@ -233,6 +241,71 @@ main {
             }
             .box.active {
                 display: flex;
+            }
+        }
+    }
+
+    section#section3 {
+        margin-top: 650px;
+        text-align: center;
+        .textPart {
+            h1 {
+                color: $font;
+                font-size: 28px;
+            }
+            p {
+                max-width: 40%;
+                margin: 25px auto;
+                font-size: 16px;
+                color: $gray;
+            }
+        }
+        .containerCards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            .card {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                margin: 0 25px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0px 0px rgba(0, 0, 0, 0.2);
+                .logo {
+                    padding: 30px;
+                }
+                .text {
+                    margin: 20px;
+                }
+                button {
+                    margin: 30px;
+                    padding: 18px 35px;
+                    width: 85%;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    background: $blue;
+                    color: $semiWhite;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                    border: 2px solid transparent;
+                    &:hover {
+                        color: $blue;
+                        background: $white;
+                        border-color: $blue;
+                    }
+                }
+            }
+            .card:nth-child(2) {
+                position: relative;
+                top: 60px;
+            }
+            .card:nth-child(3) {
+                position: relative;
+                top: 120px;
             }
         }
     }
