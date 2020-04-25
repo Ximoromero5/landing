@@ -10,7 +10,7 @@ The designs were created to the following widths:
 ## Colors
 
 ### Primary
-
+- Blue: #3e52a3 (Mind)
 - Soft Blue: hsl(231, 69%, 60%)
 - Soft Red: hsl(0, 94%, 66%)
 
