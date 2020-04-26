@@ -301,7 +301,7 @@ main section#section2 .boxes .box.active {
 }
 
 main section#section3 {
-  margin-top: 650px;
+  margin-top: 600px;
   text-align: center;
 }
 
@@ -358,9 +358,13 @@ main section#section3 .containerCards .card .text {
   margin: 20px;
 }
 
+main section#section3 .containerCards .card .text p {
+  margin: 15px;
+}
+
 main section#section3 .containerCards .card button {
   margin: 30px;
-  padding: 18px 35px;
+  padding: 16px 35px;
   width: 85%;
   border: none;
   border-radius: 5px;
@@ -388,5 +392,112 @@ main section#section3 .containerCards .card:nth-child(2) {
 main section#section3 .containerCards .card:nth-child(3) {
   position: relative;
   top: 120px;
+}
+
+main section#section4 {
+  margin: 300px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main section#section4 .text {
+  text-align: center;
+}
+
+main section#section4 .text h1 {
+  color: #252b46;
+  font-size: 28px;
+}
+
+main section#section4 .text p {
+  max-width: 60%;
+  margin: 25px auto;
+  font-size: 16px;
+  color: #9194a1;
+  line-height: 1.5;
+}
+
+main section#section4 .containerQuestions {
+  width: 45%;
+  margin: 50px 0;
+}
+
+main section#section4 .containerQuestions ul li {
+  list-style: none;
+  padding: 3px;
+  border-top: 1px solid #e0e0e0;
+}
+
+main section#section4 .containerQuestions ul li .question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 15px;
+  margin: 20px 0;
+  cursor: pointer;
+  color: #555555;
+}
+
+main section#section4 .containerQuestions ul li .question h3,
+main section#section4 .containerQuestions ul li .question i {
+  display: inline-block;
+}
+
+main section#section4 .containerQuestions ul li .question i {
+  color: #5368df;
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+main section#section4 .containerQuestions ul li .question i.fa-chevron-up {
+  color: #fa5757;
+}
+
+main section#section4 .containerQuestions ul li .question:hover {
+  color: #fa5757;
+}
+
+main section#section4 .containerQuestions ul li .answer {
+  display: none;
+}
+
+main section#section4 .containerQuestions ul li .answer.active {
+  display: block;
+}
+
+main section#section4 .containerQuestions ul li .answer.active p {
+  margin: 25px 0;
+  color: #9194a1;
+  line-height: 2;
+  font-size: 16px;
+}
+
+main section#section4 .containerQuestions ul :nth-child(4) {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+main section#section4 button {
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #5368df;
+  color: #f5f5f5;
+  width: 110px;
+  height: 50px;
+  cursor: pointer;
+  outline: 0;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
 }
 /*# sourceMappingURL=styles.css.map */

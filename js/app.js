@@ -19,4 +19,19 @@ $(document).ready(function () {
             }
         })
     });
+
+    //Questions toggle
+    function questions() {
+        $('.question').each(function () {
+            $(this).click(function () {
+                $('i.fas').each(function () { $(this).removeClass('fa-chevron-up'); });
+                $('.answer').each(function () { $(this).removeClass('active') });
+                $(this).next().toggleClass('active');
+                $(this).find('i.fas').addClass('fa-chevron-up');
+            });
+        });
+    }
+
+    questions();
+
 });
