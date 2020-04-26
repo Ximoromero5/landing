@@ -34,4 +34,21 @@ $(document).ready(function () {
 
     questions();
 
+    function validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    $('#field').keyup(function () {
+        if (!validateEmail($(this).val())) {
+            $(this).addClass('error');
+            $('#iconLabel').addClass('error');
+        } else {
+            $(this).removeClass('error');
+            $('#iconLabel').removeClass('error');
+        }
+    });
+
+    $('#formulario').submit(function (e) { e.preventDefault() })
+
 });

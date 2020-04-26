@@ -44,6 +44,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
     nav {
         margin-right: 115px;
         ul {
@@ -88,8 +91,16 @@ main {
     section#section1 {
         display: flex;
         align-items: center;
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
         div.left {
             margin-bottom: 25px;
+            @media (max-width: 768px) {
+                order: 2;
+                margin-top: 80px;
+                text-align: center;
+            }
             h1 {
                 color: $font;
                 font-size: 50px;
@@ -98,8 +109,11 @@ main {
                 color: $gray;
                 font-size: 18px;
                 max-width: 90%;
-                margin: 25px 0;
+                margin: 25px auto;
                 line-height: 1.5;
+                @media (max-width: 768px) {
+                    max-width: 70%;
+                }
             }
             div.buttons {
                 button {
@@ -134,9 +148,16 @@ main {
         div.right {
             z-index: 5;
             position: relative;
+            @media (max-width: 768px) {
+                width: 100%;
+            }
             img {
                 position: relative;
                 left: 100px;
+                @media (max-width: 768px) {
+                    width: 100%;
+                    left: 0;
+                }
             }
             &::after {
                 content: "";
@@ -148,11 +169,16 @@ main {
                 left: 280px;
                 top: 150px;
                 border-radius: 0 0 0 200px;
+                @media (max-width: 768px) {
+                    width: 100%;
+                    height: 220px;
+                    left: 60px;
+                }
             }
         }
     }
     section#section2 {
-        margin: 120px 0;
+        margin: 120px auto;
         .textPart {
             text-align: center;
             h1 {
@@ -165,6 +191,9 @@ main {
                 color: $gray;
                 font-size: 18px;
                 line-height: 1.5;
+                @media (max-width: 768px) {
+                    max-width: 90%;
+                }
             }
         }
         .changeBox {
@@ -173,6 +202,11 @@ main {
             display: flex;
             justify-content: space-between;
             border-bottom: 1px solid #e0e0e0;
+            @media (max-width: 768px) {
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+            }
             button {
                 padding: 30px 67px;
                 font-size: 16px;
@@ -182,6 +216,12 @@ main {
                 cursor: pointer;
                 outline: 0;
                 margin: -1px;
+                @media (max-width: 768px) {
+                    border-top: 1px solid #e0e0e0;
+                    width: 100%;
+                    margin: 0;
+                    padding: 20px 67px;
+                }
                 &:hover {
                     color: $red;
                 }
@@ -222,7 +262,7 @@ main {
                         color: $gray;
                         font-size: 18px;
                         max-width: 90%;
-                        margin: 25px 0;
+                        margin: 25px auto;
                         line-height: 1.5;
                     }
                     button {
@@ -240,7 +280,33 @@ main {
                 }
             }
             .box.active {
-                display: flex;
+                @media (max-width: 768px) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    button {
+                        display: none;
+                    }
+                    .left {
+                        width: 100%;
+                        img {
+                            width: 100%;
+                        }
+                        &::before {
+                            width: 100%;
+                            height: 200px;
+                            left: -50px;
+                            top: 80px;
+                        }
+                    }
+                    .right {
+                        margin: 130px auto;
+                        text-align: center;
+                        p {
+                            max-width: 70%;
+                        }
+                    }
+                }
             }
         }
     }
@@ -248,6 +314,9 @@ main {
     section#section3 {
         margin-top: 600px;
         text-align: center;
+        @media (max-width: 768px) {
+            margin-top: 710px;
+        }
         .textPart {
             h1 {
                 color: $font;
@@ -258,6 +327,9 @@ main {
                 margin: 25px auto;
                 font-size: 16px;
                 color: $gray;
+                @media (max-width: 768px) {
+                    max-width: 90%;
+                }
             }
         }
         .containerCards {
@@ -265,6 +337,9 @@ main {
             justify-content: center;
             align-items: center;
             margin-top: 40px;
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
             .card {
                 display: flex;
                 flex-direction: column;
@@ -313,7 +388,8 @@ main {
         }
     }
     section#section4 {
-        margin: 300px 0;
+        margin-top: 300px;
+        margin-bottom: 150px;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -391,6 +467,121 @@ main {
             cursor: pointer;
             outline: 0;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+footer {
+    color: $white;
+    .top {
+        background: $blue;
+        padding: 80px 0;
+        text-align: center;
+        p {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 14px;
+            margin: 20px 0 40px 0;
+        }
+        h1 {
+            max-width: 30%;
+            margin: 20px auto;
+        }
+        form {
+            margin-top: 40px;
+            position: relative;
+            #field {
+                padding: 15px 20px;
+                border: 2px solid transparent;
+                border-radius: 4px;
+                outline: 0;
+                width: 300px;
+                margin-right: 20px;
+                color: $font;
+                position: relative;
+                display: inline-block;
+                &::placeholder {
+                    color: rgb(172, 168, 168);
+                }
+            }
+            label#errorLabel {
+            }
+            label#iconLabel {
+                position: relative;
+                right: 50px;
+                color: $red;
+                font-size: 22px;
+                top: 5px;
+                display: none;
+            }
+            label#iconLabel.error {
+                display: inline-block;
+            }
+            #field.error {
+                border-color: $red;
+            }
+            input[type="submit"] {
+                padding: 16px 20px;
+                border-radius: 4px;
+                background: $red;
+                color: $white;
+                outline: 0;
+                font-size: 12px;
+                font-weight: bold;
+                cursor: pointer;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+                &:hover {
+                    border-color: $red;
+                    background: $white;
+                    color: $red;
+                }
+            }
+        }
+    }
+    .bottom {
+        margin: auto;
+        background: $font;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .left {
+            margin-left: 180px;
+            display: flex;
+            align-items: center;
+            nav {
+                ul {
+                    display: flex;
+                    li {
+                        list-style: none;
+                        a {
+                            display: block;
+                            text-transform: uppercase;
+                            color: $white;
+                            text-decoration: none;
+                            padding: 40px;
+                            font-size: 14px;
+                            letter-spacing: 1px;
+                            transition: all 0.2s;
+                            &:hover {
+                                color: $red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .right {
+            margin-right: 180px;
+            a {
+                color: $white;
+                font-size: 27px;
+                margin: 0 20px;
+                transition: all 0.2s;
+                &:hover {
+                    color: $red;
+                }
+            }
         }
     }
 }
