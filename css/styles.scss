@@ -545,13 +545,22 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
         .left {
             margin-left: 180px;
             display: flex;
             align-items: center;
+            @media (max-width: 768px) {
+                margin: 0;
+            }
             nav {
                 ul {
                     display: flex;
+                    @media (max-width: 768px) {
+                        flex-direction: column;
+                    }
                     li {
                         list-style: none;
                         a {

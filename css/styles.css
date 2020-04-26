@@ -746,6 +746,15 @@ footer .bottom {
           justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+  footer .bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 footer .bottom .left {
   margin-left: 180px;
   display: -webkit-box;
@@ -756,10 +765,25 @@ footer .bottom .left {
           align-items: center;
 }
 
+@media (max-width: 768px) {
+  footer .bottom .left {
+    margin: 0;
+  }
+}
+
 footer .bottom .left nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 768px) {
+  footer .bottom .left nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 footer .bottom .left nav ul li {
