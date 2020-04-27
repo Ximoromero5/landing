@@ -47,15 +47,29 @@ header {
 
 @media (max-width: 768px) {
   header {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+header #hamburguer {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header #hamburguer {
+    display: block;
   }
 }
 
 header nav {
   margin-right: 115px;
+}
+
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+  }
 }
 
 header nav ul {
@@ -81,6 +95,7 @@ header nav ul li a {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 header nav ul li a:hover {
@@ -98,6 +113,10 @@ header nav ul li:nth-child(4) a {
 header nav ul li:nth-child(4) a:hover {
   background: #ffffff;
   color: #fa5757;
+}
+
+header nav.active {
+  display: block;
 }
 
 main {
@@ -143,6 +162,12 @@ main section#section1 div.left h1 {
   font-size: 50px;
 }
 
+@media (max-width: 768px) {
+  main section#section1 div.left h1 {
+    font-size: 30px;
+  }
+}
+
 main section#section1 div.left p {
   color: #9194a1;
   font-size: 18px;
@@ -153,7 +178,7 @@ main section#section1 div.left p {
 
 @media (max-width: 768px) {
   main section#section1 div.left p {
-    max-width: 70%;
+    max-width: 90%;
   }
 }
 
@@ -228,9 +253,10 @@ main section#section1 div.right::after {
 
 @media (max-width: 768px) {
   main section#section1 div.right::after {
-    width: 100%;
-    height: 220px;
-    left: 60px;
+    width: 83%;
+    height: 180px;
+    left: 64px;
+    top: 100px;
   }
 }
 
@@ -257,7 +283,7 @@ main section#section2 .textPart p {
 
 @media (max-width: 768px) {
   main section#section2 .textPart p {
-    max-width: 90%;
+    max-width: 85%;
   }
 }
 
@@ -397,21 +423,30 @@ main section#section2 .boxes .box.active {
     display: none;
   }
   main section#section2 .boxes .box.active .left {
-    width: 100%;
+    width: 80%;
   }
   main section#section2 .boxes .box.active .left img {
     width: 100%;
   }
   main section#section2 .boxes .box.active .left::before {
-    width: 100%;
-    height: 200px;
+    width: 80%;
+    height: 220px;
     left: -50px;
-    top: 80px;
+    top: 40px;
   }
   main section#section2 .boxes .box.active .right {
     margin: 130px auto;
     text-align: center;
   }
+}
+
+@media (max-width: 768px) and (max-width: 768px) {
+  main section#section2 .boxes .box.active .right {
+    margin: 100 auto;
+  }
+}
+
+@media (max-width: 768px) {
   main section#section2 .boxes .box.active .right p {
     max-width: 70%;
   }
@@ -433,6 +468,12 @@ main section#section3 .textPart h1 {
   font-size: 28px;
 }
 
+@media (max-width: 768px) {
+  main section#section3 .textPart h1 {
+    font-size: 24px;
+  }
+}
+
 main section#section3 .textPart p {
   max-width: 40%;
   margin: 25px auto;
@@ -442,7 +483,7 @@ main section#section3 .textPart p {
 
 @media (max-width: 768px) {
   main section#section3 .textPart p {
-    max-width: 90%;
+    max-width: 85%;
   }
 }
 
@@ -554,6 +595,13 @@ main section#section4 .text {
 main section#section4 .text h1 {
   color: #252b46;
   font-size: 28px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  main section#section4 .text h1 {
+    max-width: 70%;
+  }
 }
 
 main section#section4 .text p {
@@ -566,7 +614,7 @@ main section#section4 .text p {
 
 @media (max-width: 768px) {
   main section#section4 .text p {
-    max-width: 80%;
+    max-width: 90%;
   }
 }
 
@@ -804,6 +852,10 @@ footer .bottom .left {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+footer .bottom .left .logo {
+  margin: 20px;
 }
 
 footer .bottom .left nav ul {

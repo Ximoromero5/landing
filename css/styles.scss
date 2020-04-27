@@ -45,10 +45,19 @@ header {
     justify-content: space-between;
     align-items: center;
     @media (max-width: 768px) {
-        flex-direction: column;
+        justify-content: space-around;
+    }
+    #hamburguer {
+        display: none;
+        @media (max-width: 768px) {
+            display: block;
+        }
     }
     nav {
         margin-right: 115px;
+        @media (max-width: 768px) {
+            display: none;
+        }
         ul {
             display: flex;
             li {
@@ -65,6 +74,7 @@ header {
                     border: 1.5px solid transparent;
                     transition: all 0.2s;
                     letter-spacing: 1px;
+                    text-align: center;
                     &:hover {
                         color: $red;
                     }
@@ -81,6 +91,9 @@ header {
                 }
             }
         }
+    }
+    nav.active {
+        display: block;
     }
 }
 
@@ -104,6 +117,9 @@ main {
             h1 {
                 color: $font;
                 font-size: 50px;
+                @media (max-width: 768px) {
+                    font-size: 30px;
+                }
             }
             p {
                 color: $gray;
@@ -112,7 +128,7 @@ main {
                 margin: 25px auto;
                 line-height: 1.5;
                 @media (max-width: 768px) {
-                    max-width: 70%;
+                    max-width: 90%;
                 }
             }
             div.buttons {
@@ -170,9 +186,10 @@ main {
                 top: 150px;
                 border-radius: 0 0 0 200px;
                 @media (max-width: 768px) {
-                    width: 100%;
-                    height: 220px;
-                    left: 60px;
+                    width: 83%;
+                    height: 180px;
+                    left: 64px;
+                    top: 100px;
                 }
             }
         }
@@ -192,7 +209,7 @@ main {
                 font-size: 18px;
                 line-height: 1.5;
                 @media (max-width: 768px) {
-                    max-width: 90%;
+                    max-width: 85%;
                 }
             }
         }
@@ -288,20 +305,23 @@ main {
                         display: none;
                     }
                     .left {
-                        width: 100%;
+                        width: 80%;
                         img {
                             width: 100%;
                         }
                         &::before {
-                            width: 100%;
-                            height: 200px;
+                            width: 80%;
+                            height: 220px;
                             left: -50px;
-                            top: 80px;
+                            top: 40px;
                         }
                     }
                     .right {
                         margin: 130px auto;
                         text-align: center;
+                        @media (max-width: 768px) {
+                            margin: 100 auto;
+                        }
                         p {
                             max-width: 70%;
                         }
@@ -321,6 +341,9 @@ main {
             h1 {
                 color: $font;
                 font-size: 28px;
+                @media (max-width: 768px) {
+                    font-size: 24px;
+                }
             }
             p {
                 max-width: 40%;
@@ -328,7 +351,7 @@ main {
                 font-size: 16px;
                 color: $gray;
                 @media (max-width: 768px) {
-                    max-width: 90%;
+                    max-width: 85%;
                 }
             }
         }
@@ -398,6 +421,10 @@ main {
             h1 {
                 color: $font;
                 font-size: 28px;
+                margin: auto;
+                @media (max-width: 768px) {
+                    max-width: 70%;
+                }
             }
             p {
                 max-width: 60%;
@@ -406,7 +433,7 @@ main {
                 color: $gray;
                 line-height: 1.5;
                 @media (max-width: 768px) {
-                    max-width: 80%;
+                    max-width: 90%;
                 }
             }
         }
@@ -571,6 +598,9 @@ footer {
             @media (max-width: 768px) {
                 margin: 0;
                 flex-direction: column;
+            }
+            .logo {
+                margin: 20px;
             }
             nav {
                 ul {
