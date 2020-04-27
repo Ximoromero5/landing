@@ -564,9 +564,21 @@ main section#section4 .text p {
   line-height: 1.5;
 }
 
+@media (max-width: 768px) {
+  main section#section4 .text p {
+    max-width: 80%;
+  }
+}
+
 main section#section4 .containerQuestions {
   width: 45%;
   margin: 50px 0;
+}
+
+@media (max-width: 768px) {
+  main section#section4 .containerQuestions {
+    width: 90%;
+  }
 }
 
 main section#section4 .containerQuestions ul li {
@@ -662,6 +674,12 @@ footer .top h1 {
   margin: 20px auto;
 }
 
+@media (max-width: 768px) {
+  footer .top h1 {
+    max-width: 100%;
+  }
+}
+
 footer .top form {
   margin-top: 40px;
   position: relative;
@@ -693,6 +711,12 @@ footer .top form #field::-ms-input-placeholder {
 
 footer .top form #field::placeholder {
   color: #aca8a8;
+}
+
+@media (max-width: 768px) {
+  footer .top form #field {
+    margin: 0;
+  }
 }
 
 footer .top form label#iconLabel {
@@ -732,6 +756,13 @@ footer .top form input[type="submit"]:hover {
   color: #fa5757;
 }
 
+@media (max-width: 768px) {
+  footer .top form input[type="submit"] {
+    width: 300px;
+    margin-top: 17px;
+  }
+}
+
 footer .bottom {
   margin: auto;
   background: #252b46;
@@ -768,6 +799,10 @@ footer .bottom .left {
 @media (max-width: 768px) {
   footer .bottom .left {
     margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -806,8 +841,20 @@ footer .bottom .left nav ul li a:hover {
   color: #fa5757;
 }
 
+@media (max-width: 768px) {
+  footer .bottom .left nav ul li a {
+    padding: 20px;
+  }
+}
+
 footer .bottom .right {
   margin-right: 180px;
+}
+
+@media (max-width: 768px) {
+  footer .bottom .right {
+    margin: 20px;
+  }
 }
 
 footer .bottom .right a {

@@ -405,11 +405,17 @@ main {
                 font-size: 16px;
                 color: $gray;
                 line-height: 1.5;
+                @media (max-width: 768px) {
+                    max-width: 80%;
+                }
             }
         }
         .containerQuestions {
             width: 45%;
             margin: 50px 0;
+            @media (max-width: 768px) {
+                width: 90%;
+            }
             ul {
                 li {
                     list-style: none;
@@ -486,6 +492,9 @@ footer {
         h1 {
             max-width: 30%;
             margin: 20px auto;
+            @media (max-width: 768px) {
+                max-width: 100%;
+            }
         }
         form {
             margin-top: 40px;
@@ -502,6 +511,9 @@ footer {
                 display: inline-block;
                 &::placeholder {
                     color: rgb(172, 168, 168);
+                }
+                @media (max-width: 768px) {
+                    margin: 0;
                 }
             }
             label#errorLabel {
@@ -536,6 +548,10 @@ footer {
                     background: $white;
                     color: $red;
                 }
+                @media (max-width: 768px) {
+                    width: 300px;
+                    margin-top: 17px;
+                }
             }
         }
     }
@@ -554,6 +570,7 @@ footer {
             align-items: center;
             @media (max-width: 768px) {
                 margin: 0;
+                flex-direction: column;
             }
             nav {
                 ul {
@@ -575,6 +592,9 @@ footer {
                             &:hover {
                                 color: $red;
                             }
+                            @media (max-width: 768px) {
+                                padding: 20px;
+                            }
                         }
                     }
                 }
@@ -582,6 +602,9 @@ footer {
         }
         .right {
             margin-right: 180px;
+            @media (max-width: 768px) {
+                margin: 20px;
+            }
             a {
                 color: $white;
                 font-size: 27px;
