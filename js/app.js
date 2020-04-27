@@ -49,6 +49,20 @@ $(document).ready(function () {
         }
     });
 
-    $('#formulario').submit(function (e) { e.preventDefault() })
+    $('#formulario').submit(function (e) { e.preventDefault() });
+
+
+    //Hamburguer menu
+    $('#hamburguer i').click(function () {
+        $(this).hasClass('fa-bars') ? $(this).removeClass('fa-bars').addClass('fa-times') : $(this).removeClass('fa-times').addClass('fa-bars');
+        $('#headerMenu').toggleClass('active');
+    });
+
+    $('#navMobile ul li a').each(function () {
+        $(this).click(function () {
+            $('#hamburguer i').removeClass('fa-times').addClass('fa-bars');
+            $('#headerMenu').removeClass('active');
+        });
+    });
 
 });
