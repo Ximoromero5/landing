@@ -64,10 +64,12 @@ header {
     .top {
         display: flex;
         width: 100%;
-        justify-content: space-around;
+        justify-content: space-between;
+        @media (max-width: 768px) {
+            justify-content: space-around;
+        }
     }
     nav {
-        margin-right: 115px;
         @media (max-width: 768px) {
             display: none;
         }
@@ -120,8 +122,6 @@ header.active {
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 30px;
-    .top {
-    }
     nav {
         display: flex;
         margin: 0;
